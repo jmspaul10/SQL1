@@ -1,0 +1,31 @@
+Create a cookie store database
+
+CREATE TABLE Cookies (id INTEGER PRIMARY KEY, item TEXT, quantity_remaining INTEGER, quantity_sold INTEGER, price INTEGER);
+
+INSERT INTO cookies VALUES (1,"Chocolate Chip", 8, 3, 2);
+INSERT INTO cookies VALUES (2,"Almond",3,8,2.1);
+INSERT INTO cookies VALUES (3,"Peanut Butter",7,7,2.6);
+INSERT INTO cookies VALUES (4,"Sugar",5,8,2.3);
+INSERT INTO cookies VALUES (5,"White Chocolate Macadamia",2,9,2.5);
+INSERT INTO cookies VALUES (6,"Oatmeal Raisin",6,6,2.4);
+INSERT INTO cookies VALUES (7,"Lemon",5,3,2.7);
+INSERT INTO cookies VALUES (8,"Snickerdoodle",2,8,3.2);
+INSERT INTO cookies VALUES (9,"Gingerbread",4,9,2.9);
+INSERT INTO cookies VALUES (10,"Salted Caramel",6,5,3);
+INSERT INTO cookies VALUES (11,"M&M",5,8,2.8);
+INSERT INTO cookies VALUES (12,"Double Chocolate Chunk",3,13,2.2);
+INSERT INTO cookies VALUES (13,"Thin-Mint",1,14,3.1);
+INSERT INTO cookies VALUES (14,"Coconut",14,1,3.3);
+INSERT INTO cookies VALUES (15,"Hermit",6,9,3.5);
+
+--display the database ordered by price.
+Select * from cookies 
+Order by price desc;
+
+--what is the average price of all cookies?
+Select avg(price) from cookies;
+
+--what are the top 5 cookies sold?
+Select * from cookies
+Order by quantity_sold desc
+limit 5;
